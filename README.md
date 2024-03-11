@@ -2,7 +2,7 @@
 
 ## Description
 
-CSV table operations with custom-defined data types. Objective *is not just to perform operations on tables* but to provide a **foundation for a Query Language** that allows complex data manipulations. Query Language that ombines simple operations on tables, thus opening up new ways, enabling customization, optimization, and advanced analysis.
+CSV table operations with custom-defined data types. Objective *is not just to perform operations on tables* but to provide a **foundation for a Query Language** that allows complex data manipulations. Query Language that combines simple operations on tables, thus opening up new ways, enabling customization, optimization, and advanced analysis.
 
 ## Table Structure
 
@@ -25,7 +25,7 @@ There exists **two** row representations, that give different ways to work with 
 
 ## Table
 
-Toolkit for simple data table manipulation and CSV file handling:
+Toolkit for data table manipulation and table handling operations.
 
 - **Parsing and Display (`apply`):** Parse input and generate output in CSV format, data exchange and visualization.
 - **Column Selection (`select`)**: Extract specific columns from a table based on user input.
@@ -45,11 +45,11 @@ The grammar defines a query language for operations on tables, allowing for the 
 
 ## Query
 
-**Flexible and Extensible**: Enables easy integration of processing functions, simplifying complex data tasks and offering a framework for adding new features as needed.
+**Flexible and Extensible**: Provides an easy integration of processing functions over the `Option[Table]`, simplifying complex data tasks and establishing a framework for incorporating new features as needed.
 
 - **Select**: Extract data by column names.
 - **Filter**: Keep rows that meet specified conditions.
 - **Merge**: Join two tables using a shared key column, resolving overlaps and filling missing entries.
 - **NewCol**: Introduce a new column filled with a default value across all rows.
 
-Query Language operations that allows for sequential and combinable transformations on tables, enabling complex data manipulation tasks to be executed in an intuitive manner.
+**Query Language** operations that allows for sequential and combinable transformations on tables, enabling complex tasks to be executed in an intuitive manner on different sets of csv data files.
