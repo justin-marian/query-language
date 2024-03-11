@@ -2,7 +2,7 @@
 
 ## Description
 
-CSV table operations using custom-defined data types. The objective *is not just to perform operations on tables* but to provide a **foundation for a Query Language** that allows complex data manipulations. This Query Language offers the ability to execute simple operations on tables, thus opening up possibilities both flexible and easy to expand with new functionalities.
+CSV table operations using custom-defined data types. The objective *is not just to perform operations on tables* but to provide a **foundation for a Query Language** that allows complex data manipulations. Query Language offers the ability to combine simple operations on tables, thus opening up possibilities both flexible and easy to expand or test with new functionalities.
 
 ### Table Structure
 
@@ -22,7 +22,7 @@ These two row representations give different ways to work with table data, makin
 
 ### Query Structure
 
-The provided grammar defines a query language for operations on tables, allowing for the selection of columns, addition of new columns, merging of two tables, and filtering of rows. Here's an explanation in English:
+The grammar defines a query language for operations on tables, allowing for the selection of columns, addition of new columns, merging of two tables, and filtering of rows.
 
 - **Atomic Query** (`<table>`): The base table on which the query is executed. Starting point for applying further operations.
 - **Select** (`Select <column_list> <query>`): Selects a list of columns from the given table. Fails if any of the specified columns do not exist in the table.
@@ -32,7 +32,7 @@ The provided grammar defines a query language for operations on tables, allowing
 
 ## Table
 
-Robust toolkit for simple data table manipulation and CSV file handling, articulated through the following enhanced features:
+Toolkit for simple data table manipulation and CSV file handling:
 
 - **Parsing and Display (`apply`):** Parse input and generate output in CSV format, data exchange and visualization.
 - **Column Selection (`select`)**: Extract specific columns from a table based on user input. It returns `None` when specified columns do not exist.
