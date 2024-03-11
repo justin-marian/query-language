@@ -2,7 +2,7 @@
 
 ## Description
 
-CSV table operations using custom-defined data types. The objective *is not just to perform operations on tables* but to provide a **foundation for a Query Language** that allows complex data manipulations. Query Language helps to combine simple operations on tables, thus opening up possibilities both flexible and easy to expand or test with new functionalities.
+CSV table operations using custom-defined data types. The objective *is not just to perform operations on tables* but to provide a **foundation for a Query Language** that allows complex data manipulations. Query Language helps to combine simple operations on tables, thus opening up possibilities both flexible and easy to expand new functionalities.
 
 ## Table Structure
 
@@ -18,7 +18,10 @@ The `Table` data structure is built to handle tabular data, consisting of `Strin
     type Line = List[String]
 ```
 
-These **two** row representations give different ways to work with table data, making the `Table` structure flexible for various tasks. Use `Line` for straightforward tasks and `Row` when you need to do more detailed work that involves column names.
+There are **two** row representations, that give different ways to work with table data, making the `Table` structure flexible for various tasks.
+
+- `Line` for straightforward tasks.
+- `Row` for detailed work that involves column names.
 
 ## Table
 
