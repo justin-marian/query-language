@@ -2,9 +2,7 @@
 
 ## Description
 
-CSV table operations using custom-defined data types, facilitating the development process. The ultimate goal is to create a flexible and extensible Query Language capable of applying operations to manipulate the data within tables.
-
-The objective *is not just to perform operations on tables* but to provide a **foundation for a Query Language** that allows complex data manipulations. This Query Language offers the ability to execute simple operations on tables, thus opening up possibilities both flexible and easy to expand with new functionalities.
+CSV table operations using custom-defined data types. The objective *is not just to perform operations on tables* but to provide a **foundation for a Query Language** that allows complex data manipulations. This Query Language offers the ability to execute simple operations on tables, thus opening up possibilities both flexible and easy to expand with new functionalities.
 
 ### Table Structure
 
@@ -26,9 +24,9 @@ These two row representations give different ways to work with table data, makin
 
 The provided grammar defines a query language for operations on tables, allowing for the selection of columns, addition of new columns, merging of two tables, and filtering of rows. Here's an explanation in English:
 
-- **Atomic Query** (`<table>`): Represents the base table on which the query is executed. This is the starting point for applying further operations.
-- **Select** (`Select <column_list> <query>`): Selects a list of columns from the given table. The operation fails if any of the specified columns do not exist in the table.
-- **New Column** (`NewCol <column_name> <query>`): Adds a new column with a specified name and default value to a table. This operation is only successful if the column can be added to both tables involved in the query.
+- **Atomic Query** (`<table>`): The base table on which the query is executed. Starting point for applying further operations.
+- **Select** (`Select <column_list> <query>`): Selects a list of columns from the given table. Fails if any of the specified columns do not exist in the table.
+- **New Column** (`NewCol <column_name> <query>`): Adds a new column with a specified name and default value to a table. Only successful if the column can be added to both tables involved in the query.
 - **Merge** (`Merge <column_name> <query> <query>`): Combines two tables based on a common key column. The operation is possible only if the key column exists in both tables.
 - **Filter** (`Filter <filter_cond> <query>`): Applies a filter condition to the rows of the table, retaining only those rows that meet the condition.
 
@@ -36,15 +34,15 @@ The provided grammar defines a query language for operations on tables, allowing
 
 Robust toolkit for simple data table manipulation and CSV file handling, articulated through the following enhanced features:
 
-- **Parsing and Display (`apply`):** parse input and generate output in CSV format, data exchange and visualization.
-- **Column Selection (`select`)**: extract specific columns from a table based on user input. It returns `None` when specified columns do not exist.
-- **Column Addition (`newCol`)**: addition of a new column to the table, populating it with a default value across all rows. This feature is essential for data enrichment and preparing datasets for further analysis.
-- **Row Filtering (`filter`)**: applies user-defined conditions to table rows, retaining only those that meet the criteria. The `filter` function extends to logical operations, supporting `&&` (AND), `||` (OR), and direct column value comparisons. It handles cases involving non-existent columns by returning `None`.
+- **Parsing and Display (`apply`):** Parse input and generate output in CSV format, data exchange and visualization.
+- **Column Selection (`select`)**: Extract specific columns from a table based on user input. It returns `None` when specified columns do not exist.
+- **Column Addition (`newCol`)**: Addition of a new column to the table, populating it with a default value across all rows. This feature is essential for data enrichment and preparing datasets for further analysis.
+- **Row Filtering (`filter`)**: Applies user-defined conditions to table rows, retaining only those that meet the criteria. The `filter` function extends to logical operations, supporting `&&` (AND), `||` (OR), and direct column value comparisons. It handles cases involving non-existent columns by returning `None`.
 - **Table Merging (`merge`)**: Merges two tables based on a shared key column. It uniquely handles overlapping values by concatenating them with (`;`), preserving both datasets' integrity, ensuring no data loss. For unmatched rows, it fills missing columns with empty strings, ensuring the merged table's completeness. This approach highlights our commitment to data integrity, guaranteeing no loss of valuable information.
 
 ## Query
 
-- **Flexible and Extensible**: The introduction of a Query Language allows for the seamless combination of the above processing functions. This not only simplifies complex data manipulation tasks but also provides a framework for extending the toolkit with new features as needed.
+- **Flexible and Extensible**: Allows for the seamless combination of the above processing functions. This not only simplifies complex data manipulation tasks but also provides a framework for extending the toolkit with new features as needed.
 
 - **Select**: Extract data by column names.
 - **Filter**: Keep rows that meet specified conditions.
