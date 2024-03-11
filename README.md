@@ -6,7 +6,7 @@ CSV table operations with custom-defined data types. Objective *is not just to p
 
 ## Table Structure
 
-The `Table` data structure is built to handle tabular data, consisting of `String` cells arranged in rows and columns. Each column in a table has a name to make it easier to work with the data. Main ways to represent a row:
+The `Table` data structure is built to handle tabular data, consisting of `String` cells arranged in rows and columns, the first column names the element types: `Table (columnNames: Line, tabular: List[List[String]])`. Each column in a table has a name to make it easier to work with the data. Main ways to represent a row:
 
 ```scala
     type Line = List[String]
