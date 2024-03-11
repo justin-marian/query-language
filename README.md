@@ -2,9 +2,9 @@
 
 ## Description
 
-CSV table operations using custom-defined data types, facilitating the development process. The ultimate goal is to create a flexible and extensible Query Language capable of applying complex operations and manipulating data within tables.
+CSV table operations using custom-defined data types, facilitating the development process. The ultimate goal is to create a flexible and extensible Query Language capable of applying operations to manipulate the data within tables.
 
-The objective *is not just to perform operations on tables* but to provide a **foundation for a Query Language** that allows complex data manipulations. This Query Language will offer users the ability to execute simple operations on tables, thus opening up possibilities for extensive data analysis and processing in a way that is both flexible and easy to expand with new functionalities.
+The objective *is not just to perform operations on tables* but to provide a **foundation for a Query Language** that allows complex data manipulations. This Query Language offers the ability to execute simple operations on tables, thus opening up possibilities both flexible and easy to expand with new functionalities.
 
 ### Table Structure
 
@@ -20,7 +20,7 @@ The `Table` data structure is built to handle tabular data, consisting of `Strin
     type Line = List[String]
 ```
 
-These two row representations give you different ways to work with table data, making the `Table` structure flexible for various tasks. You can use `Line` for straightforward tasks and `Row` when you need to do more detailed work that involves column names.
+These two row representations give different ways to work with table data, making the `Table` structure flexible for various tasks. Use `Line` for straightforward tasks and `Row` when you need to do more detailed work that involves column names.
 
 ### Query Structure
 
@@ -36,7 +36,7 @@ The provided grammar defines a query language for operations on tables, allowing
 
 Robust toolkit for simple data table manipulation and CSV file handling, articulated through the following enhanced features:
 
-- **Parsing and Display (`apply`):** parse input and generate output in CSV format, simplifying data exchange and visualization.
+- **Parsing and Display (`apply`):** parse input and generate output in CSV format, data exchange and visualization.
 - **Column Selection (`select`)**: extract specific columns from a table based on user input. It returns `None` when specified columns do not exist.
 - **Column Addition (`newCol`)**: addition of a new column to the table, populating it with a default value across all rows. This feature is essential for data enrichment and preparing datasets for further analysis.
 - **Row Filtering (`filter`)**: applies user-defined conditions to table rows, retaining only those that meet the criteria. The `filter` function extends to logical operations, supporting `&&` (AND), `||` (OR), and direct column value comparisons. It handles cases involving non-existent columns by returning `None`.
