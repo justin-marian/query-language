@@ -25,7 +25,7 @@ There exists **two** row representations, that give different ways to work with 
 
 ## Table
 
-Toolkit for data table manipulation and table handling operations.
+Toolkit for simple data table manipulation and CSV file handling:
 
 - **Parsing and Display (`apply`):** Parse input and generate output in CSV format, data exchange and visualization.
 - **Column Selection (`select`)**: Extract specific columns from a table based on user input.
@@ -37,7 +37,7 @@ Toolkit for data table manipulation and table handling operations.
 
 The grammar defines a query language for operations on tables, allowing for the selection of columns, addition of new columns, merging of two tables, and filtering of rows.
 
-- **Atomic Query** (`<table>`): The base table on which the query is executed. Starting point for applying further operations.
+- **Atomic Query** (`<table>`): The base table on which the query is executed. Starting point for applying further operations on the current offered table.
 - **Select** (`Select <column_list> <query>`): Selects a list of columns from the given table. Fails if any of the specified columns do not exist in the table.
 - **New Column** (`NewCol <column_name> <query>`): Adds a new column with a specified name and default value to a table. Only successful if the column can be added to both tables involved in the query.
 - **Merge** (`Merge <column_name> <query> <query>`): Combines two tables based on a common key column. The operation is possible only if the key column exists in both tables.
