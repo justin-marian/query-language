@@ -8,15 +8,13 @@ CSV table operations with custom-defined data types. Objective *is not just to p
 
 The `Table` data structure is built to handle tabular data, consisting of `String` cells arranged in rows and columns. Each column in a table has a name to make it easier to work with the data. Main ways to represent a row:
 
-- **Line**: Just a list of the values in a row, put in order. It's a simple way to look at row data in case if the user doesn't need to know about the column names.
-- **Row**: Map form, where each column name is linked to its value in the row. It's useful for when you need to do operations that depend on knowing which data belongs to which column.
-
 ```scala
-    // Line is just a row without column names
     type Line = List[String]
-    // Row contains the column name and the value
     type Row = Map[String, String]
 ```
+
+- **Line**: Just a list of the values in a row, put in order. It's a simple way to look at row data in case if the user doesn't need to know about the column names.
+- **Row**: Map form, where each column name is linked to its value in the row. It's useful for when you need to do operations that depend on knowing which data belongs to which column.
 
 There exists **two** row representations, that give different ways to work with table data, making the `Table` structure flexible for various tasks including sorting, searching, aggregating, and exporting.
 
@@ -36,6 +34,14 @@ Toolkit for simple data table manipulation and CSV file handling:
 ## Query Structure
 
 The grammar defines a query language for operations on tables, allowing for the selection of columns, addition of new columns, merging of two tables, and filtering of rows.
+
+```scala
+    <query> ::=  <table>
+        | Select <column_list> <query>          
+        | NewCol <column_name> <query>         
+        | Merge <column_name> <query> <query>   
+        | Filter <filter_cond> <query>
+```
 
 - **Atomic Query** (`<table>`): The base table on which the query is executed. Starting point for applying further operations on the current offered table.
 - **Select** (`Select <column_list> <query>`): Selects a list of columns from the given table. Fails if any of the specified columns do not exist in the table.
