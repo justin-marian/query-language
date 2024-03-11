@@ -12,10 +12,10 @@ The `Table` data structure is built to handle tabular data, consisting of `Strin
 - **Row**: Map form, where each column name is linked to its value in the row. It's useful for when you need to do operations that depend on knowing which data belongs to which column.
 
 ```scala
-    // Row contains the column name and the value
-    type Row = Map[String, String]
     // Line is just a row without column names
     type Line = List[String]
+    // Row contains the column name and the value
+    type Row = Map[String, String]
 ```
 
 There exists **two** row representations, that give different ways to work with table data, making the `Table` structure flexible for various tasks including sorting, searching, aggregating, and exporting.
