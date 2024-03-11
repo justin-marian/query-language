@@ -2,13 +2,13 @@
 
 ## Description
 
-CSV table operations using custom-defined data types. The objective *is not just to perform operations on tables* but to provide a **foundation for a Query Language** that allows complex data manipulations. Query Language helps to combine simple operations on tables, thus opening up possibilities both flexible and easy to expand new functionalities.
+CSV table operations with custom-defined data types. Objective *is not just to perform operations on tables* but to provide a **foundation for a Query Language** that allows complex data manipulations. Query Language that ombines simple operations on tables, thus opening up new ways, enabling customization, optimization, and advanced analysis.
 
 ## Table Structure
 
 The `Table` data structure is built to handle tabular data, consisting of `String` cells arranged in rows and columns. Each column in a table has a name to make it easier to work with the data. Main ways to represent a row:
 
-- **Line**: Just a list of the values in a row, put in order. It's a simple way to look at row data when you don't need to know about the column names.
+- **Line**: Just a list of the values in a row, put in order. It's a simple way to look at row data in case if the user doesn't need to know about the column names.
 - **Row**: Map form, where each column name is linked to its value in the row. It's useful for when you need to do operations that depend on knowing which data belongs to which column.
 
 ```scala
@@ -18,7 +18,7 @@ The `Table` data structure is built to handle tabular data, consisting of `Strin
     type Line = List[String]
 ```
 
-There are **two** row representations, that give different ways to work with table data, making the `Table` structure flexible for various tasks.
+There exists **two** row representations, that give different ways to work with table data, making the `Table` structure flexible for various tasks including sorting, searching, aggregating, and exporting.
 
 - `Line` for straightforward tasks.
 - `Row` for detailed work that involves column names.
@@ -28,9 +28,9 @@ There are **two** row representations, that give different ways to work with tab
 Toolkit for simple data table manipulation and CSV file handling:
 
 - **Parsing and Display (`apply`):** Parse input and generate output in CSV format, data exchange and visualization.
-- **Column Selection (`select`)**: Extract specific columns from a table based on user input. It returns `None` when specified columns do not exist.
+- **Column Selection (`select`)**: Extract specific columns from a table based on user input.
 - **Column Addition (`newCol`)**: Addition of a new column to the table, populating it with a default value across all rows. This feature is essential for data enrichment and preparing datasets for further analysis.
-- **Row Filtering (`filter`)**: Applies user-defined conditions to table rows, retaining only those that meet the criteria. The `filter` function extends to logical operations, supporting `&&` (AND), `||` (OR), and direct column value comparisons. It handles cases involving non-existent columns by returning `None`.
+- **Row Filtering (`filter`)**: Applies user-defined conditions to table rows, retaining only those that meet the criteria. The `filter` function extends to logical operations, supporting `&&` (AND), `||` (OR), and direct column value comparisons, involving cases with non-existent columns.
 - **Table Merging (`merge`)**: Merges two tables based on a shared key column. It uniquely handles overlapping values by concatenating them with (`;`), preserving both datasets' integrity, ensuring **no data loss**. For ***unmatched rows***, it fills missing columns with empty strings, ensuring the merged table's completeness. This approach show how to handle data integrity, guaranteeing no loss of valuable information.
 
 ## Query Structure
